@@ -11,7 +11,7 @@ function convertData() {
 
     for (var i = 0; i < dataArray.length; i++) {
         var subjectData = dataArray[i].split("\t"); // Tách dữ liệu của mỗi dòng thành các cột
-        console.log(subjectData);
+        // console.log(subjectData);
 
         var aSubject = null;
         // Kiểm tra mã môn học
@@ -28,8 +28,13 @@ function convertData() {
             };
             // subjects.push(aSubject);
 
-            for (var j = i; j <= i + 9; j++) {
-                console.log('đang duyệt vị trí ' + j);
+            for (var j = i; j <= i + 12; j++) {
+                // console.log('đang duyệt vị trí ' + j);
+
+                if (dataArray[j] == 'DSSV') {
+                    // console.log('chạm DSSV -> next');
+                    break;
+                }
 
                 if (validDays.includes(dataArray[j])) { // điều kiện để duyệt thứ
                     // console.log('đang duyệt tại ' + j);
@@ -45,10 +50,23 @@ function convertData() {
                 aSubject.tietBD.push(dataArray[indexOfdataArray + 2]);
                 aSubject.soTiet.push(dataArray[indexOfdataArray + 3]);
                 aSubject.soTiet.push(dataArray[indexOfdataArray + 4]);
-            } else {
+            } else if (aSubject.thu.length == 1) {
                 aSubject.tietBD.push(dataArray[indexOfdataArray + 1]);
                 aSubject.soTiet.push(dataArray[indexOfdataArray + 2]);
+            } else {    // trường hợp có 3 tiết học
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 1]);
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 2]);
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 3]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 4]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 5]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 6]);
             }
+
+            // var k = aSubject.thu.length;
+            // for (var temp = 1; temp <= k; temp++) {
+            //     aSubject.tietBD.push(dataArray[indexOfdataArray + temp]);
+            //     aSubject.soTiet.push(dataArray[indexOfdataArray + temp]);
+            // }
             subjects.push(aSubject);
         }
     }
