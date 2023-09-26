@@ -5,6 +5,7 @@ function convertData() {
 
     // Biểu thức chính quy để kiểm tra
     var regex = /^8|BO|CA/;
+    const validDays = ["Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy", "Chủ nhật"];
 
     var subjects = []; // Khởi tạo biến subject1
 
@@ -13,20 +14,42 @@ function convertData() {
         console.log(subjectData);
 
         var aSubject = null;
-        // Kiểm tra nếu mã môn học là '841072'
+        // Kiểm tra mã môn học
         if (regex.test(subjectData[0]) && subjectData[0].length >= 3) {
             console.log(i);
             aSubject = {
                 maMH: subjectData[0],
                 tenMH: subjectData[1],
                 nhomMH: subjectData[2],
-                thu: subjectData[8],
-                tietBD: parseInt(subjectData[9]),
-                soTiet: parseInt(subjectData[10]),
-                phong: subjectData[11]
+                thu: [],
+                tietBD: [],
+                soTiet: [],
+                phong: []
             };
             // subjects.push(aSubject);
-            // Kết thúc vòng lặp sau khi tìm thấy môn học
+
+            for (var j = i; j <= i + 9; j++) {
+                console.log('đang duyệt vị trí ' + j);
+
+                if (validDays.includes(dataArray[j])) { // điều kiện để duyệt thứ
+                    // console.log('đang duyệt tại ' + j);
+                    aSubject.thu.push(dataArray[j]);
+                    var indexOfdataArray = j;
+                } else if (dataArray[j] != null && (dataArray[j].startsWith("C.") || dataArray[j].startsWith("1.") || dataArray[j].startsWith("2.")) && dataArray[j].length > 3) {
+                    // console.log('đang duyệt phòng tại ' + j);
+                    aSubject.phong.push(dataArray[j]);
+                }
+            }
+            if (aSubject.thu.length == 2) {
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 1]);
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 2]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 3]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 4]);
+            } else {
+                aSubject.tietBD.push(dataArray[indexOfdataArray + 1]);
+                aSubject.soTiet.push(dataArray[indexOfdataArray + 2]);
+            }
+            subjects.push(aSubject);
         }
     }
 
