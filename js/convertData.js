@@ -70,6 +70,8 @@ function convertData() {
             subjects.push(aSubject);
         }
     }
-
-    console.log(subjects); // In ra biến subject1 để kiểm tra
+    localStorage.setItem('danhsachmonHoc', JSON.stringify(subjects));
+    
+    // Lấy mảng từ localStorage với tên "danhsachmonHoc"
+    // var storedSubjects = JSON.parse(localStorage.getItem('danhsachmonHoc'));
 }

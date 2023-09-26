@@ -18,7 +18,7 @@
             overflow: hidden;
         }
     </style>
-    <script src="./js/index.js"></script>
+    <script src="./js/convertData.js"></script>
 </head>
 
 <body>
@@ -49,12 +49,12 @@
         <hr>
     </div>
     <section style="background-image: radial-gradient(#cfe2ff, #cfe2ff, white, white, white);">
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container col-xxl-8 px-4 py-5 mb-5">
             <div class="table-responsive" style="overflow: visible;">
-                <table class="table shadow bdr">
+                <table id="scheduletable" class="table shadow bdr">
                     <thead>
                         <tr class="table-primary">
-                            <th class="border-end px-4">Thứ/Tiết</th>
+                            <th class="border-end px-4">Thứ/Giờ</th>
                             <th class="border-end px-4">Thứ hai</th>
                             <th class="border-end px-4">Thứ ba</th>
                             <th class="border-end px-4">Thứ tư</th>
@@ -66,7 +66,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="align-middle bg-light">7h</td>
+                            <td class="border-end align-middle bg-light px-4">7h</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
@@ -76,52 +76,50 @@
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">7h50</td>
+                            <td class="border-end align-middle bg-light px-4">7h50</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
-                            <td class="border-end">Row 2</td>
+                            <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4">Row 2</td>
                             <td class="border-end px-4"></td>
                         </tr>
-                        <!-- Thêm các hàng và cột tiếp theo tương tự -->
-                        <!-- Ví dụ: -->
                         <tr>
-                            <td class="align-middle">9h</td>
-                            <td class="border-end px-4">Row 3</td>
-                            <td class="border-end px-4">Row 3</td>
-                            <td class="border-end">Row 3</td>
+                            <td class="border-end align-middle bg-light px-4">9h</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
+                            <td class="border-end px-4">Row 3</td>
+                            <td class="border-end px-4">Row 3</td>
+                            <td class="border-end px-4" rowspan="3">Row 3</td>
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">9h50</td>
-                            <td class="border-end px-4">Row 3</td>
-                            <td class="border-end px-4">Row 3</td>
-                            <td class="border-end">Row 3</td>
+                            <td class="border-end align-middle bg-light px-4">9h50</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
+                            <td class="border-end px-4">Row 3</td>
+                            <td class="border-end px-4">Row 3</td>
+                            <!-- <td class="border-end px-4">Row 3</td> -->
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">10h40</td>
+                            <td class="border-end align-middle bg-light px-4">10h40</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
-                            <td class="border-end px-4">Row 3</td>
+                            <!-- <td class="border-end px-4">Row 3</td> -->
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
                             <td colspan="8" class="text-center align-middle">Nghỉ trưa</td>
                         </tr>
                         <tr>
-                            <td class="align-middle">1h</td>
+                            <td class="border-end align-middle bg-light px-4">1h</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
@@ -131,7 +129,7 @@
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">1h50</td>
+                            <td class="border-end align-middle bg-light px-4">1h50</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
@@ -141,7 +139,7 @@
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">3h</td>
+                            <td class="border-end align-middle bg-light px-4">3h</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
@@ -151,7 +149,7 @@
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">3h50</td>
+                            <td class="border-end align-middle bg-light px-4">3h50</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
@@ -161,7 +159,7 @@
                             <td class="border-end px-4"></td>
                         </tr>
                         <tr>
-                            <td class="align-middle">4h40</td>
+                            <td class="border-end align-middle bg-light px-4">4h40</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
                             <td class="border-end px-4">Row 3</td>
