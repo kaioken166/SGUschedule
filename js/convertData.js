@@ -11,7 +11,7 @@ function convertData() {
 
     for (var i = 0; i < dataArray.length; i++) {
         var subjectData = dataArray[i].split("\t"); // Tách dữ liệu của mỗi dòng thành các cột
-        // console.log(subjectData);
+        console.log(subjectData);   
 
         var aSubject = null;
         // Kiểm tra mã môn học

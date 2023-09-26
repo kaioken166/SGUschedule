@@ -19,56 +19,30 @@ function renderTable() {
             </tr>
         </thead>`;
 
-    var string = 
-    `<tbody>
-        <tr>
+    var string =
+        `<tr>
             <td class="border-end align-middle bg-light px-4">7h</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
+                
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">7h50</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
-            <td class="border-end px-4">Row 2</td>
+                
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">9h</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td id="insertHere" class="border-end px-4">Row 3</td>
-            <!-- <td class="border-end px-4" rowspan="3">Row 3</td> -->
+                
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">9h50</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <!-- <td class="border-end px-4">Row 3</td> -->
+                
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">10h40</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <!-- <td class="border-end px-4">Row 3</td> -->
+            
             <td class="border-end px-4"></td>
         </tr>
         <tr>
@@ -76,55 +50,29 @@ function renderTable() {
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">1h</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
+            
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">1h50</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
+            
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">3h</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
+            
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">3h50</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
+            
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">4h40</td>
-            <td class="border-end px-4">T2</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
-            <td class="border-end px-4">Row 3</td>
+            
             <td class="border-end px-4"></td>
-        </tr>
-    </tbody>`;
+        </tr>`;
 
     var tableBody = `<tbody>` + string + `</tbody>`;
 
