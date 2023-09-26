@@ -22,27 +22,52 @@ function renderTable() {
     var string =
         `<tr>
             <td class="border-end align-middle bg-light px-4">7h</td>
-                
-            <td class="border-end px-4"></td>
+            <td id="thu2tiet1" class="border-end px-4"></td>
+            <td id="thu3tiet1" class="border-end px-4"></td>
+            <td id="thu4tiet1" class="border-end px-4"></td>
+            <td id="thu5tiet1" class="border-end px-4"></td>
+            <td id="thu6tiet1" class="border-end px-4"></td>
+            <td id="thu7tiet1" class="border-end px-4"></td>   
+            <td id="cntiet1" class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">7h50</td>
-                
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>     
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">9h</td>
-                
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>     
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">9h50</td>
-                
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>     
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">10h40</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td> 
             <td class="border-end px-4"></td>
         </tr>
         <tr>
@@ -50,27 +75,52 @@ function renderTable() {
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">1h</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td> 
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">1h50</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td> 
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">3h</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td> 
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">3h50</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
             <td class="border-end px-4"></td>
         </tr>
         <tr>
             <td class="border-end align-middle bg-light px-4">4h40</td>
-            
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
+            <td class="border-end px-4"></td>
             <td class="border-end px-4"></td>
         </tr>`;
 
