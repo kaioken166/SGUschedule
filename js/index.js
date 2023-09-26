@@ -2,14 +2,21 @@ function convertData() {
     var data = document.getElementById("textarea1").value; // Lấy dữ liệu từ text box
     var dataArray = data.split("\n"); // Tách dữ liệu thành các dòng
     console.log(dataArray);
-    var subject1 = null; // Khởi tạo biến subject1
 
-    for (var i = 1; i < dataArray.length; i++) {
+    // Biểu thức chính quy để kiểm tra
+    var regex = /^8|BO|CA/;
+
+    var subjects = []; // Khởi tạo biến subject1
+
+    for (var i = 0; i < dataArray.length; i++) {
         var subjectData = dataArray[i].split("\t"); // Tách dữ liệu của mỗi dòng thành các cột
+        console.log(subjectData);
 
+        var aSubject = null;
         // Kiểm tra nếu mã môn học là '841072'
-        if (subjectData[0] === '841072') {
-            subject1 = {
+        if (regex.test(subjectData[0]) && subjectData[0].length >= 3) {
+            console.log(i);
+            aSubject = {
                 maMH: subjectData[0],
                 tenMH: subjectData[1],
                 nhomMH: subjectData[2],
@@ -18,9 +25,10 @@ function convertData() {
                 soTiet: parseInt(subjectData[10]),
                 phong: subjectData[11]
             };
-            break; // Kết thúc vòng lặp sau khi tìm thấy môn học
+            // subjects.push(aSubject);
+            // Kết thúc vòng lặp sau khi tìm thấy môn học
         }
     }
 
-    console.log(subject1); // In ra biến subject1 để kiểm tra
+    console.log(subjects); // In ra biến subject1 để kiểm tra
 }
